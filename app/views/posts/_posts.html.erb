@@ -1,0 +1,17 @@
+<% if posts.present? %>
+  <ul>
+  <% posts.each do |post| %>
+    <li>      
+      <% if promote_button %>
+        <span><%= post.title %></span>        
+        <input type="button" value="Promote" id="<%=post.id%>" onclick="promote(this);" />
+      <% else %>
+        <%= link_to post.title, visit_post_path(post), :method => :post %>
+        <span><%= post.clicks %> </span>
+      <% end %>
+    </li>
+  <%  end %>
+  </ul>
+<% else %>
+<div>There is no post</div>
+<% end %>

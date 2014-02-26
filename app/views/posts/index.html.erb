@@ -1,0 +1,19 @@
+<h1>Promoted Posts</h1>
+<%= render partial: 'posts', locals: {posts: @promoted, promote_button: false} %>
+<br/>
+<hr/>
+
+<h1>Regular Posts</h1>
+<%= render partial: 'posts', locals: {posts: @normal, promote_button: true} %>
+
+
+<script>
+
+  function promote(obj){
+    var click_count = prompt('Enter click count for this post.', 100);
+    if(click_count>0) {
+      location.href = "/posts/promote_post/"+obj.id+"/"+click_count;
+    }
+  }
+
+</script>
