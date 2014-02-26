@@ -1,0 +1,6 @@
+tmp/*
+log/
+nbproject/
+.DS_Store
+app/.DS_Store
+public/uploads/
