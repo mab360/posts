@@ -1,0 +1,4 @@
+posts
+=====
+
+sample posts promotions
